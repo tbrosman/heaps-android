@@ -1355,6 +1355,8 @@ ELSE()
     SET(LIBNAME "OpenAL32")
 ENDIF()
 
+SET(LINKER_FLAGS "${EXTRA_LIBS} -llog -lOpenSLES")
+
 # Needed for openal.pc.in
 SET(prefix ${CMAKE_INSTALL_PREFIX})
 SET(exec_prefix "\${prefix}")
