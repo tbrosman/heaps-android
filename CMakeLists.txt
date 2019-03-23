@@ -38,6 +38,7 @@ file(GLOB png hashlink/include/png/*.c)
 file(GLOB zlib hashlink/include/zlib/*.c)
 file(GLOB vorbis hashlink/include/vorbis/*.c)
 file(GLOB mikkt hashlink/include/mikktspace/*.c)
+file(GLOB minimp3 hashlink/include/minimp3/*.c)
 
 add_library(fmt.hdll STATIC
 	${fmt}
@@ -45,6 +46,7 @@ add_library(fmt.hdll STATIC
 	${zlib}
 	${vorbis}
 	${mikkt}
+  ${minimp3}
 )
 
 add_dependencies(fmt.hdll turbojpeg)
@@ -57,6 +59,7 @@ target_include_directories(fmt.hdll PRIVATE
 	hashlink/include/mikktspace
 	hashlink/include/vorbis
 	hashlink/include/zlib
+  hashlink/include/minimp3
 	${tj_include}
 )
 
